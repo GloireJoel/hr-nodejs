@@ -1,0 +1,35 @@
+{
+  "name": "hr-nodejs",
+  "version": "1.0.0",
+  "description": "backend nodejs hr-app",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "babel-node ./app.js",
+    "build": "echo Test build completed! No package was uploaded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GloireJoel/hr-nodejs.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "hr-app",
+    "demo"
+  ],
+  "author": "Gloire Kaf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GloireJoel/hr-nodejs/issues"
+  },
+  "homepage": "https://github.com/GloireJoel/hr-nodejs#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset": "^1.1.7",
+    "babel-preset-env": "^1.7.0",
+    "express": "^4.17.1",
+    "jest": "^27.0.4"
+  }
+}
