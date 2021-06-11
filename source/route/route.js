@@ -9,7 +9,7 @@ import {
     getTodayDate,
     getMonthsName,
     getPeople 
-} from '../controllers/controller.js';
+} from '../controller/controller.js';
 
 // set up the routing
 const routes = (app) => {

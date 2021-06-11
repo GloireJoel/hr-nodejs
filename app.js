@@ -1,6 +1,6 @@
 // import Express and routes
 import express from 'express';
-import routes from './source/routes/route.js';
+import routes from './source/route/route.js';
 
 // constant variables 
 const app = express();
