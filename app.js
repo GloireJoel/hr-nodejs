@@ -4,7 +4,7 @@ import routes from './source/route/route.js';
 
 // constant variables 
 const app = express();
-const PORT = 3000;
+const PORT = 30002;
 const HOST = '0.0.0.0';
 
 // body parser setup for Express v4.16.0 and higher

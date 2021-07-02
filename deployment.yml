@@ -8,24 +8,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodej-demo-app
+  name: hr-node
   namespace: default
 spec:
-  replicas: 3                     # this is number of pods
+  replicas: 2                    # this is number of pods
   selector:
     matchLabels:
-      app: nodejs-demo-app
+      app: hr-node
   template:
     metadata:
       labels:
-        app: nodejs-demo-app
+        app: hr-node
     spec:
       # Kubernetes run docker pull pseudo/your-image:latest under the hood
       # Image field in Kubernetes resources is simply the docker image to run.
       containers:
-      - name: nodejs-demo-app
+      - name: hr-node
         # pulling image from my DockerHub
-        image: yanndocker/nodejs-demo:latest
+        image: glorykaf/hr-node:latest
         # -----------------------------------------------------------*
         # It is a good practice to declare resource requests and 
         # limits for both memory and cpu for each container. 
@@ -59,7 +59,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodejs-demo-app-entrypoint
+  name: hr-node-entrypoint
   namespace: default
 spec:
   # -----------------------------------------------------------*
@@ -73,7 +73,7 @@ spec:
   # type: NodePort
   type: LoadBalancer
   selector:
-    app: nodejs-demo-app
+    app: hr-node
   # The range of valid ports in kubernetes is 30000-32767
   ports:
     - name: http
