@@ -23,8 +23,8 @@ resource "google_container_cluster" "primary" {
   # let's now configure kubectl to talk to the cluster
   provisioner "local-exec" {
     # we will pas the project ID, zone and cluster name here
-    # nodejs-demo-319000 | us-central1-c | node-demo-k8s
-    command = "gcloud container clusters get-credentials node-demo-k8s --zone us-central1-c --project nodejs-demo-319000"
+    # nodejs-demo2-320713 | us-central1-c | node-demo-k8s
+    command = "gcloud container clusters get-credentials node-demo-k8s --zone us-central1-c --project nodejs-demo2-320713"
   }
 
   node_config {
@@ -63,7 +63,10 @@ resource "google_compute_firewall" "nodeports" {
 
   allow {
     protocol = "tcp"
-    ports    = ["30000-32767"]  # valid ports in kubernetes is 30000-32767
+    ports    = ["30000-32767", "80", "443", "8080", "22"]  # valid ports in kubernetes is 30000-32767
+  }
+  allow {
+    protocol = "icmp"
   }
   source_ranges = ["0.0.0.0/0"]
 }
