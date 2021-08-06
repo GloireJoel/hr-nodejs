@@ -11,7 +11,7 @@ metadata:
   name: hr-node
   namespace: default
 spec:
-  replicas: 2                    # this is number of pods
+  replicas: 4                    # this is number of pods
   selector:
     matchLabels:
       app: hr-node
@@ -80,10 +80,10 @@ spec:
       protocol: TCP
       port: 80             # this is service port 80
       targetPort: 30002
-      nodePort: 30003
+      # nodePort: 30003
     - name: https
       protocol: TCP
       port: 443            # this is service port 443
       targetPort: 30002
-      nodePort: 30004
+      # nodePort: 30004
   
