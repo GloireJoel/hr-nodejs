@@ -135,6 +135,6 @@ jobs:
           gcloud config set compute/region us-central1
           gcloud config set compute/zone us-central1-c
           gcloud container clusters get-credentials node-demo-k8s
-          envsubst < deploy.yml
-          envsubst < deploy.yml | kubectl apply -f -
+          envsubst < deployment.yml
+          envsubst < deployment.yml | kubectl apply -f -
           kubectl get all
