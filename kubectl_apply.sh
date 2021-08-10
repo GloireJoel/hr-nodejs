@@ -1,3 +1,5 @@
 #!/bin/bash
 
-kubectl apply -f deploy.yml
+# deploy kubernetes hr-node deployment and 
+# hr-node-entrypoint service
+kubectl apply -f deployment.yml
