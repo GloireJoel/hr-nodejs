@@ -35,11 +35,11 @@ spec:
         # -----------------------------------------------------------*
         resources:
           limits:
-            memory: 512Mi
-            cpu: "1"
+            memory: 64Mi
+            cpu: "250m"
           requests:
-            memory: 256Mi
-            cpu: "0.2"
+            memory: 32Mi
+            cpu: "200m"
         # specify the container port
         ports:
         - containerPort: 30002
